@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
@@ -25,11 +26,11 @@ long double factorial(int num) {
 
 }
 
-long double getEPowerX(int num, int iterations) {
+long double getEPowerX(int num) {
 
     long double eToTheX = 0;
 
-    for (int i = 0; i < iterations; i++) {
+    for (int i = 0; i < 100; i++) {
         eToTheX += (power(num, i) / factorial(i));
     }
 
@@ -41,7 +42,9 @@ int main() {
 
 //    cout << factorial(30);
 //    cout << power(2, 10);
-//    cout << getEPowerX(90, 150);
+    cout << getEPowerX(90) << endl;
+//    cout << exp(90);
+
 
     return 0;
 }
