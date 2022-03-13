@@ -70,7 +70,12 @@ void getUserNumber(){
     }
 
     if (isValidNumber) {
-        getEPowerX(stoi(userNumber, 0, 10));
+
+        long double ePowerXCalculatedValue = getEPowerX(stoi(userNumber, 0, 10));
+
+        cout << endl << "Calculated value = " << ePowerXCalculatedValue;
+        cout << endl << "Expected value   = " << exp(stoi(userNumber, 0, 10));
+
     }else{
         getUserNumber();
         return;
@@ -79,11 +84,6 @@ void getUserNumber(){
 }
 
 int main() {
-
-//    cout << factorial(30);
-//    cout << power(2, 10);
-//    getEPowerX(3);
-//    cout << exp(90);
 
     getUserNumber();
 
