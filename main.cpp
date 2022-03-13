@@ -28,10 +28,22 @@ long double factorial(int num) {
 
 long double getEPowerX(int num) {
 
+    int counter = 0;
     long double eToTheX = 0;
 
     for (int i = 0; i < 100; i++) {
         eToTheX += (power(num, i) / factorial(i));
+
+        if (counter < 9){
+            cout << eToTheX << "  ";
+            counter += 1;
+            continue;
+        }else if(counter == 9){
+            cout << eToTheX << endl;
+            counter = 0;
+            continue;
+        }
+
     }
 
     return eToTheX;
@@ -42,7 +54,7 @@ int main() {
 
 //    cout << factorial(30);
 //    cout << power(2, 10);
-    cout << getEPowerX(90) << endl;
+    getEPowerX(3);
 //    cout << exp(90);
 
 
