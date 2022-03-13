@@ -1,3 +1,17 @@
+/*
+
+ --- Exponential function calculator ---
+
+ This program calculates e^x by the summation:
+ --(1 + x + x^2/2! + x^3/3! + ... + x^n/n!)--
+ where x is our number and n is the iteration
+
+ @Date: March 13, 2022
+ @Author: Youssef Moataz
+ @Version: v1.0.0
+
+ */
+
 #include <iostream>
 #include <cmath>
 #include <string>
