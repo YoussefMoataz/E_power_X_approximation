@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <string>
 
 using namespace std;
 
@@ -50,13 +51,41 @@ long double getEPowerX(int num) {
 
 }
 
+void getUserNumber(){
+
+    bool isValidNumber = true;
+
+    string userNumber;
+
+    cout << "Enter number to get its exponential result :";
+    cin >> userNumber;
+
+    for (char i : userNumber) {
+
+        if (!isdigit(i)){
+            isValidNumber = false;
+            break;
+        }
+
+    }
+
+    if (isValidNumber) {
+        getEPowerX(stoi(userNumber, 0, 10));
+    }else{
+        getUserNumber();
+        return;
+    }
+
+}
+
 int main() {
 
 //    cout << factorial(30);
 //    cout << power(2, 10);
-    getEPowerX(3);
+//    getEPowerX(3);
 //    cout << exp(90);
 
+    getUserNumber();
 
     return 0;
 }
