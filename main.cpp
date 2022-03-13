@@ -35,11 +35,11 @@ long double getEPowerX(int num) {
     for (int i = 0; i < 100; i++) {
         eToTheX += (power(num, i) / factorial(i));
 
-        if (counter < 9){
+        if (counter < 9) {
             cout << eToTheX << "  ";
             counter += 1;
             continue;
-        }else if(counter == 9){
+        } else if (counter == 9) {
             cout << eToTheX << endl;
             counter = 0;
             continue;
@@ -51,7 +51,7 @@ long double getEPowerX(int num) {
 
 }
 
-void getUserNumber(){
+void getUserNumber() {
 
     bool isValidNumber = true;
 
@@ -60,9 +60,9 @@ void getUserNumber(){
     cout << "Enter number to get its exponential result :";
     cin >> userNumber;
 
-    for (char i : userNumber) {
+    for (char i: userNumber) {
 
-        if (!isdigit(i)){
+        if (!isdigit(i)) {
             isValidNumber = false;
             break;
         }
@@ -76,7 +76,7 @@ void getUserNumber(){
         cout << endl << "Calculated value = " << ePowerXCalculatedValue;
         cout << endl << "Expected value   = " << exp(stoi(userNumber, 0, 10));
 
-    }else{
+    } else {
         getUserNumber();
         return;
     }
