@@ -57,7 +57,7 @@ void getUserNumber() {
 
     string userNumber;
 
-    cout << "Enter number to get its exponential result :";
+    cout << "Enter number to get its exponential result :" << endl;
     cin >> userNumber;
 
     for (char i: userNumber) {
