@@ -70,6 +70,7 @@ long double getEPowerX(int num) {
             continue;
 
         } else if (counter == 9) {
+
             cout << eToTheX << endl;
             counter = 0;
             continue;
