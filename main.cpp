@@ -74,6 +74,7 @@ long double getEPowerX(int num) {
             cout << eToTheX << endl;
             counter = 0;
             continue;
+
         }
 
     }
