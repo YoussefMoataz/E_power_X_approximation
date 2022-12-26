@@ -64,6 +64,7 @@ long double getEPowerX(int num) {
         // print the process
         // 10 outputs in one line , 10 lines total (for 100 as final number)
         if (counter < 9) {
+
             cout << eToTheX << "  ";
             counter += 1;
             continue;
