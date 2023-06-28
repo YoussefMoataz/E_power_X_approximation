@@ -39,7 +39,7 @@ long double factorial(int num) {
     if (num == 0 || num == 1) {
         return 1;
 
-    // other cases
+        // other cases
     } else {
         return num * factorial(num - 1);
     }
@@ -49,7 +49,7 @@ long double factorial(int num) {
 // calculate e^x given x as a parameter
 long double getEPowerX(int num) {
 
-    // number of iteration
+    // number of iterations
     const int finalNumber = 100;
 
     int counter = 0;
@@ -89,36 +89,17 @@ void getUserNumber() {
     // changes false if the input is not digits
     bool isValidNumber = true;
 
-    string userNumber;
+    int userNumber;
 
     cout << "Enter number to get its exponential result :" << endl;
     cin >> userNumber;
 
-    // check input validity, is numbers
-    for (char i: userNumber) {
+    // make the calculation
+    long double ePowerXCalculatedValue = getEPowerX(userNumber);
 
-        if (!isdigit(i)) {
-            isValidNumber = false;
-            break;
-        }
-
-    }
-
-    if (isValidNumber) {
-
-        // make the calculation
-        long double ePowerXCalculatedValue = getEPowerX(stoi(userNumber, 0, 10));
-
-        // print the calculated and expected values
-        cout << endl << "Calculated value = " << ePowerXCalculatedValue;
-        cout << endl << "Expected value   = " << exp(stoi(userNumber, 0, 10));
-
-    } else {
-
-        // re-call this function
-        getUserNumber();
-        return;
-    }
+    // print the calculated and expected values
+    cout << endl << "Calculated value = " << ePowerXCalculatedValue;
+    cout << endl << "Expected value   = " << exp(userNumber);
 
 }
 
